@@ -12,6 +12,7 @@ def create_dataset(n=1000, seed=42):
     score = -3 + 0.2 * distance + 0.9 * raining + 1.2 * heavy_traffic
     probability = 1 / (1 + np.exp(-score))
     late = rng.binomial(1, probability)
+    print("hello world")
     return pd.DataFrame(
         {
             "order_id": range(1, n + 1),
